@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Reset */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a {
+    color:deepskyblue;
+    text-decoration: none;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: none;
+}
+
+button,
+input[type="Submit"]{
+    border:none;
+    background:none;
+    color: unset;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6, p, ul, ol{
+    margin: 1rem 0;
+}
+
+/* General */
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header */
+#header {
+    height: 50px;
+    display: flex;
+    background-color: #32639A; 
+    align-items: center;
+    justify-content: space-between;
+}
+#header .title {
+    margin:0;
+    color: white;
+    padding: 0 1rem;
+}
+#header .auth-options  {
+    display: flex;
+    height: 100%;
+}
+#header .auth-options button {
+    background-color: #32639A;
+    padding: 0 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+#header .auth-options button:hover {
+    background-color: #23456C;
+}
+
+@media screen and (max-width:550px){
+    #header title{
+        font-size: 1.2rem;
+    }
+    #header .auth-options button{
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+}
