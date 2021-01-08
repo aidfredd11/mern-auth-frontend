@@ -32,8 +32,8 @@ export default function App() {
           headers: { "x-auth-token": token },
         });
         setUserData({
-            token,
-            user: userRes.data,
+          token,
+          user: userRes.data,
         });
       }
     };
@@ -46,11 +46,13 @@ export default function App() {
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/register" component={Register}></Route>
-          </Switch>
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Home}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/register" component={Register}></Route>
+            </Switch>
+          </div>
         </UserContext.Provider>
       </BrowserRouter>
     </>
